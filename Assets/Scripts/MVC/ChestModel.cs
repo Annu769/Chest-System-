@@ -2,6 +2,7 @@ using ChestSystem.ScriptableObjects;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 namespace ChestSystem.chest
 {
     public class ChestModel
@@ -13,6 +14,7 @@ namespace ChestSystem.chest
         public int minGems { get; }
         public int maxGems { get; }
         public float timeToOpen { get; }
+
 
         public ChestModel(ChestScriptableObject chestScriptable)
         {
@@ -29,8 +31,5 @@ namespace ChestSystem.chest
         {
             chestController = _chestController;
         }
-
-
     }
-
 }

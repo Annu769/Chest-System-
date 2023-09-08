@@ -3,13 +3,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 namespace ChestSystem.chest
 {
     public class ChestController
     {
         private ChestModel chestModel;
         private ChestView chestView;
-
         public ChestController(ChestScriptableObject chestConfiguration)
         {
             chestModel = new ChestModel(chestConfiguration);
@@ -37,6 +37,7 @@ namespace ChestSystem.chest
             SetChestParent(parent);
             chestView.gameObject.SetActive(true);
         }
+
 
         public void DisableChest()
         {
@@ -68,10 +69,12 @@ namespace ChestSystem.chest
             return ChestService.instance.checkIfQueueIsFull();
         }
 
+
         public ChestModel GetChestModel()
         {
             return chestModel;
         }
+
     }
 
 }
