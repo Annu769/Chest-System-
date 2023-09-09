@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ChestScriptableObjectList
   m_EditorClassIdentifier: 
   chests:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 357c1f3a6d5f5a142b1429872dcd1135, type: 2}
+  - {fileID: 11400000, guid: 8a03563f734ed9e41b53d15bcdcddc6f, type: 2}
+  - {fileID: 11400000, guid: 7f0651356519a8643aee0d01a121ca4b, type: 2}
+  - {fileID: 11400000, guid: bedf7e16e96046a4a811ce27f4ad9a83, type: 2}

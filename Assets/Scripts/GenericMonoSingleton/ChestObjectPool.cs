@@ -10,10 +10,7 @@ namespace ChestSystem.PoolObject
         private ChestScriptableObject chestData;
         List<PoolItem> itemPool = new();
 
-        public ChestObjectPool(ChestScriptableObject _chestData)
-        {
-            chestData = _chestData;
-        }
+        public ChestObjectPool(ChestScriptableObject _chestData) => chestData = _chestData;
 
         public ChestController GetItem()
         {

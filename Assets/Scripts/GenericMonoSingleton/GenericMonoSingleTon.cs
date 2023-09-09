@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 namespace ChestSystem.genericSingleton
 {
     public class GenericMonoSingleTon<T> : MonoBehaviour where T : GenericMonoSingleTon<T>

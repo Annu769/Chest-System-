@@ -2,7 +2,6 @@ using ChestSystem.ScriptableObjects;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 namespace ChestSystem.chest
 {
     public class ChestModel
@@ -30,5 +29,8 @@ namespace ChestSystem.chest
         {
             chestController = _chestController;
         }
+
+
     }
+
 }

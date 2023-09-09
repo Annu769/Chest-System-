@@ -4,8 +4,8 @@ using System.Collections.Generic;
 using ChestSystem.PoolObject;
 using ChestSystem.ScriptableObjects;
 using ChestSystem.Event;
+using ChestSystem.Currency;
 using UnityEngine;
-
 
 namespace ChestSystem.chest
 {
@@ -67,6 +67,11 @@ namespace ChestSystem.chest
             }
             newchestController.EnableChest(ChestHolder);
             chestControllers.Add(newchestController);
+        }
+        public void AddCurrencys(int coinCount,int gemCount)
+        {
+            CurrencyService.instance.AddCoin(coinCount);
+            CurrencyService.instance.AddGems(gemCount);
         }
         public void DestroyChest(ChestController chestController, ChestType chestType)
         {
@@ -131,3 +136,4 @@ namespace ChestSystem.chest
 
 
 }
+

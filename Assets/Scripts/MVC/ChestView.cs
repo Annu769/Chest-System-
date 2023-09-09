@@ -1,12 +1,14 @@
 using UnityEngine;
-
 using UnityEngine.UI;
 using TMPro;
+using System;
+
 namespace ChestSystem.chest
 {
     public class ChestView : MonoBehaviour
     {
         ChestController chestController;
+        private State currentChestState;
         [SerializeField] private Image imageHolder;
         [SerializeField] private ChestType chestType;
         [SerializeField] private Sprite chestClosedImage;
@@ -19,6 +21,23 @@ namespace ChestSystem.chest
         [SerializeField] private TMP_Text timerText;
         [SerializeField] private TMP_Text gemCountText;
         [SerializeField] private GameObject chestOpenedPanel;
+
+        [Header("States")]
+
+        public UnlockedState chestUnlockingState;
+        public OpenState chestOpenedState;
+        public LockedState chestlockedState;
+        private void Awake()
+        {
+            chestUnlockingState = GetComponent<UnlockedState>();
+            chestOpenedState = GetComponent<OpenState>();
+            chestlockedState = GetComponent<LockedState>();
+        }
+
+        public ChestModel GetChestModel()
+        {
+            return chestController.GetChestModel();
+        }
 
         private void Start()
         {
@@ -68,11 +87,14 @@ namespace ChestSystem.chest
         {
             chestController.ChestOpened();
         }
+        public void ClickedOnChest()
+        {
+            currentChestState.OnChestClick();
+        }
         public bool GetChestUnlockingProcess()
         {
             return chestController.GetChestUnlockProcess();
         }
-
         public void SetChestUnlockingProcess(bool isUnlocking)
         {
             chestController.SetChestUnlockProcess(isUnlocking);
@@ -99,5 +121,16 @@ namespace ChestSystem.chest
         {
             return chestController.CheckIfQueueIsFull();
         }
+        public void ChangeChestState(State newChestState)
+        {
+            if (currentChestState != null)
+            {
+                currentChestState.OnStateExit();
+            }
+            currentChestState = newChestState;
+            currentChestState.OnStateEnter();
+        }
+
+        private void Update() => currentChestState.Tick();
     }
 }

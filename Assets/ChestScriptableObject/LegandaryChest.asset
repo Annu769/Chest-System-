@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d467b6ac67b300647ae9d8db519f4fe3, type: 3}
   m_Name: LegandaryChest
   m_EditorClassIdentifier: 
-  chestType: 0
-  minCoin: 0
-  maxCoin: 0
-  minGems: 0
-  maxGems: 0
-  timeToOpenChest: 0
-  chestView: {fileID: 0}
+  chestType: 3
+  minCoin: 110
+  maxCoin: 150
+  minGems: 50
+  maxGems: 100
+  timeToOpenChest: 300
+  chestView: {fileID: 3585514929105980650, guid: f9213c7d679c5dd4497aa722a3b5dc43, type: 3}

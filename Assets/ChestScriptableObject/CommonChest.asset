@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: CommonChest
   m_EditorClassIdentifier: 
   chestType: 0
-  minCoin: 0
-  maxCoin: 0
-  minGems: 0
-  maxGems: 0
-  timeToOpenChest: 0
-  chestView: {fileID: 0}
+  minCoin: 50
+  maxCoin: 60
+  minGems: 5
+  maxGems: 10
+  timeToOpenChest: 123
+  chestView: {fileID: 3296345635320452560, guid: 3eecdd9f0a48244418e2fdf4316ceaf3, type: 3}
