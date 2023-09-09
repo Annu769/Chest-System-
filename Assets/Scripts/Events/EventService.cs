@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 namespace ChestSystem.Event
 {
-    public class EventService : MonoBehaviour
+    public class EventService 
     {
         private static EventService Instance;
         public static EventService instance

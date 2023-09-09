@@ -9,10 +9,7 @@ namespace ChestSystem.chest
     public class ChestView : MonoBehaviour
     {
         ChestController chestController;
-
         private State currentChestState;
-
-
         [SerializeField] private Image imageHolder;
         [SerializeField] private ChestType chestType;
         [SerializeField] private Sprite chestClosedImage;
@@ -93,11 +90,14 @@ namespace ChestSystem.chest
         {
             chestController.ChestOpened();
         }
+        public void ClickedOnChest()
+        {
+            currentChestState.OnChestClick();
+        }
         public bool GetChestUnlockingProcess()
         {
             return chestController.GetChestUnlockProcess();
         }
-
         public void SetChestUnlockingProcess(bool isUnlocking)
         {
             chestController.SetChestUnlockProcess(isUnlocking);
@@ -135,10 +135,8 @@ namespace ChestSystem.chest
             currentChestState.OnStateEnter();
         }
 
-        private void Update()
-        {
-            currentChestState.Tick();
-        }
+
+        private void Update() => currentChestState.Tick();
 
     }
 }

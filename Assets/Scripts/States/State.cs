@@ -1,5 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
+
+
 using UnityEngine;
 namespace ChestSystem.chest
 {
@@ -11,11 +11,14 @@ namespace ChestSystem.chest
         protected virtual void Awake()
         {
             chestView = GetComponent<ChestView>();
-        }
-        public virtual void  OnStateEnter()
+       }
+
+        public virtual void OnStateEnter()
         {
             this.enabled = true;
         }
+
+
         public virtual void OnStateExit()
         {
             this.enabled = false;

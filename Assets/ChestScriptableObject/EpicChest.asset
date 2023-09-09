@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d467b6ac67b300647ae9d8db519f4fe3, type: 3}
   m_Name: EpicChest
   m_EditorClassIdentifier: 
-  chestType: 0
-  minCoin: 0
-  maxCoin: 0
-  minGems: 0
-  maxGems: 0
-  timeToOpenChest: 0
-  chestView: {fileID: 0}
+  chestType: 2
+  minCoin: 70
+  maxCoin: 100
+  minGems: 20
+  maxGems: 40
+  timeToOpenChest: 200
+  chestView: {fileID: 4716072857056503938, guid: a69fe25ab506d9048bb95700c224945c, type: 3}

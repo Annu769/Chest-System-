@@ -1,9 +1,5 @@
 using ChestSystem.ScriptableObjects;
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
 namespace ChestSystem.chest
 {
     public class ChestController
@@ -42,11 +38,14 @@ namespace ChestSystem.chest
         public void DisableChest()
         {
             SetChestParent(null);
+            chestView.ChangeChestState(chestView.chestlockedState);
+            chestView.GetImageHolder().sprite = chestView.GetChestClosedImage();
+            chestView.DisableQueueText();
             chestView.gameObject.SetActive(false);
         }
        public void  ChangeChestStateToUnlocking()
         {
-            
+            chestView.ChangeChestState(chestView.chestUnlockingState);
         }
         public bool GetChestUnlockProcess()
         {
@@ -68,7 +67,6 @@ namespace ChestSystem.chest
         {
             return ChestService.instance.checkIfQueueIsFull();
         }
-
 
         public ChestModel GetChestModel()
         {
