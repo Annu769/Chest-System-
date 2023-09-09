@@ -6,7 +6,6 @@ namespace ChestSystem.chest
     {
         private ChestModel chestModel;
         private ChestView chestView;
-
         public ChestController(ChestScriptableObject chestConfiguration)
         {
             chestModel = new ChestModel(chestConfiguration);
@@ -34,6 +33,7 @@ namespace ChestSystem.chest
             SetChestParent(parent);
             chestView.gameObject.SetActive(true);
         }
+
 
         public void DisableChest()
         {
@@ -72,6 +72,7 @@ namespace ChestSystem.chest
         {
             return chestModel;
         }
+
     }
 
 }

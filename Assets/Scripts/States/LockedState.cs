@@ -2,7 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using ChestSystem.Event;
+
 using ChestSystem.Currency;
+
 using UnityEngine;
 namespace ChestSystem.chest
 {
@@ -65,10 +67,12 @@ namespace ChestSystem.chest
         {
             EventService.instance.onUnlockWithTimer -= TimerBasedUnlocked;
             EventService.instance.onUnlockWithGem -= GemsBaseedUnlocked;
+
             if (CurrencyService.instance.RemoveGems(gemCost))
                 chestView.ChangeChestState(chestView.chestOpenedState);
             else
                 EventService.instance.InvokeOnInsufficientGem();
+
         }
 
         private void TimerBasedUnlocked()

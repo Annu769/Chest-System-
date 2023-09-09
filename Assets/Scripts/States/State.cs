@@ -1,4 +1,5 @@
 
+
 using UnityEngine;
 namespace ChestSystem.chest
 {
@@ -10,12 +11,13 @@ namespace ChestSystem.chest
         protected virtual void Awake()
         {
             chestView = GetComponent<ChestView>();
-        }
+       }
 
         public virtual void OnStateEnter()
         {
             this.enabled = true;
         }
+
 
         public virtual void OnStateExit()
         {

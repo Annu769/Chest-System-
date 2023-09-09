@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using TMPro;
 using System;
 
+
 namespace ChestSystem.chest
 {
     public class ChestView : MonoBehaviour
@@ -22,6 +23,7 @@ namespace ChestSystem.chest
         [SerializeField] private TMP_Text gemCountText;
         [SerializeField] private GameObject chestOpenedPanel;
 
+
         [Header("States")]
 
         public UnlockedState chestUnlockingState;
@@ -38,6 +40,7 @@ namespace ChestSystem.chest
         {
             return chestController.GetChestModel();
         }
+
 
         private void Start()
         {
@@ -121,6 +124,7 @@ namespace ChestSystem.chest
         {
             return chestController.CheckIfQueueIsFull();
         }
+
         public void ChangeChestState(State newChestState)
         {
             if (currentChestState != null)
@@ -131,6 +135,8 @@ namespace ChestSystem.chest
             currentChestState.OnStateEnter();
         }
 
+
         private void Update() => currentChestState.Tick();
+
     }
 }

@@ -14,6 +14,7 @@ namespace ChestSystem.chest
         public int maxGems { get; }
         public float timeToOpen { get; }
 
+
         public ChestModel(ChestScriptableObject chestScriptable)
         {
             chestType = chestScriptable.Chests;
